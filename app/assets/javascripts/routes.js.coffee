@@ -24,8 +24,5 @@ App.UsersIndexRoute = App.UsersRoute.extend
     controller.set('users', model)
 
 App.showUserRoute = App.UsersRoute.extend
-  model: (params) ->
-    App.User.find(params.user_id)
   setupController: (controller, model) ->
     @_super()
-    controller.set('content', model)
