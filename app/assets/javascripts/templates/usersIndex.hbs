@@ -7,7 +7,9 @@
   {{#each user in users}}
     <tr>
       <td>{{user.id}}</td>
-      <td><a href='#'>{{user.fullName}}</a></td>
+      <td>
+        {{#linkTo 'showUser' user}}{{user.fullName}}{{/linkTo}}
+      </td>
     </tr>
   {{/each}}
 </table>
