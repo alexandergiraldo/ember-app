@@ -2,11 +2,15 @@ App.Router.reopen
   location: 'history'
   rootURL: '/'
 
-App.Router.map (match) ->
-  match('/').to 'home'
-  match('/users').to 'users', (match) ->
-    match('/').to 'usersIndex'
-    match('/:user_id').to 'showUser'
+App.Router.map ->
+  @route "home",
+    path: "/"
+  @resource 'users', ->
+    @route 'new'
+    @route 'edit',
+      path: '/:user_id/edit'
+    @route 'show'
+      path: '/:user_id'
 
 App.HomeRoute = Ember.Route.extend
   setupController: (controller, model) ->
@@ -18,11 +22,23 @@ App.UsersRoute = Ember.Route.extend
 
 App.UsersIndexRoute = App.UsersRoute.extend
   model: ->
-    App.User.find()
+    if App.User.isLoaded()
+      App.User.all()
+    else
+      App.User.find()
   setupController: (controller, model) ->
     @_super()
     controller.set('users', model)
 
-App.showUserRoute = App.UsersRoute.extend
+App.ShowUserRoute = App.UsersRoute.extend
   setupController: (controller, model) ->
     @_super()
+  renderTemplate: ->
+    @render('users/showUser');
+
+App.UsersNewRoute = App.UsersRoute.extend
+  model: ->
+    App.User.createRecord()
+  setupController: (controller, model) ->
+    @_super()
+    controller.set('content', model)
