@@ -32,7 +32,7 @@ App.UsersIndexRoute = App.UsersRoute.extend
 
 App.UsersNewRoute = App.UsersRoute.extend
   model: ->
-    App.User.createRecord()
+    App.User.createRecord({firstName: '', lastName: ''})
   setupController: (controller, model) ->
     @_super()
     controller.set('content', model)
