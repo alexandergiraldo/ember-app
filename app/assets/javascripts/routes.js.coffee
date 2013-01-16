@@ -44,5 +44,5 @@ App.UserRoute = Ember.Route.extend
     controller.set('content', model)
     @controllerFor('application').set('currentRoute', 'users')
 
-App.UsersShowRoute = AppUserRoute.extend()
-App.UsersEditRoute = AppUserRoute.extend()
+App.UsersShowRoute = App.UserRoute.extend()
+App.UsersEditRoute = App.UserRoute.extend()
