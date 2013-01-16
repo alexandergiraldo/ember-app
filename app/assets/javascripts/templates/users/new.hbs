@@ -13,9 +13,9 @@
       <label {{bindAttr for='quoteField.elementId'}}>Quote</label>
       {{view Ember.TextArea valueBinding='quote' name='quote' viewName='quoteField'}}
     </div>
-    <a href='#' {{action 'create'}} class='btn btn-success'}}>Create</a>
+    <a href='#' {{action save target='controller'}} class='btn btn-success'}}>Create</a>
   </fieldset>
 </form>
 <div class='page-header'></div>
 
-<a href='#' {{action 'cancel'}} class='btn btn-inverse'>Cancel</a>
+<a href='#' {{action cancel target='controller'}} class='btn btn-inverse'>Cancel</a>

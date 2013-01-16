@@ -30,12 +30,6 @@ App.UsersIndexRoute = App.UsersRoute.extend
     @_super()
     controller.set('users', model)
 
-App.ShowUserRoute = App.UsersRoute.extend
-  setupController: (controller, model) ->
-    @_super()
-  renderTemplate: ->
-    @render('users/showUser');
-
 App.UsersNewRoute = App.UsersRoute.extend
   model: ->
     App.User.createRecord()
