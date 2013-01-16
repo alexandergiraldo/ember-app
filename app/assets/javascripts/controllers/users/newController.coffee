@@ -7,3 +7,6 @@ App.UsersNewController = Ember.ObjectController.extend
   cancel: ->
     @content.deleteRecord()
     @transitionToRoute('users.index')
+
+  buttonTitle: 'Create'
+  headerTitle: 'Creating'
