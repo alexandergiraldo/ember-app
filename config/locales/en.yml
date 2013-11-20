@@ -5,3 +5,4 @@ en:
   hello: "Hello world"
   header_title: "First Ember Application"
   header_sub_title: "Sample localization"
+  login: "Login with Facebook"
