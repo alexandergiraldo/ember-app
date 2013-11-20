@@ -6,4 +6,8 @@ en:
   header_title: "First Ember Application"
   header_sub_title: "Sample localization"
   login: "Login with Facebook"
-  new_project: "Nuevo Proyecto"
+  new_project: "New Project"
+  of: 'of'
+  and: 'and'
+  read_more: "Read more"
+  telephone: "Telephone"
