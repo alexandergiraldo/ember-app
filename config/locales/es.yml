@@ -1,2 +1,13 @@
-en:
-  hello: "Hola Mundo"
+es:
+  and: y
+  header_sub_title: Localización de Ejemplo
+  header_title: Primera Aplicación Ember
+  hello: Hola Mundo
+  login: Iniciar sesión con Facebook
+  my_pages: Mis paginas
+  new_project: Nuevo Proyecto
+  of: de
+  read_more: Leer Mas
+  telephone: Telefono
+  tos: Terminos & Condiciones
+  wrote: Escribio
